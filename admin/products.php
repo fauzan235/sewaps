@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 
 $stmt = $pdo->query("SELECT * FROM products ORDER BY created_at DESC");
 $products = $stmt->fetchAll();
-
+?>
 <?php include '../includes/header.php'; ?>
 
 <div class="container" style="margin-top: 20px;">

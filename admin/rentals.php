@@ -34,7 +34,7 @@ $stmt = $pdo->query("
     ORDER BY r.created_at DESC
 ");
 $rentals = $stmt->fetchAll();
-
+?>
 <?php include '../includes/header.php'; ?>
 
 <div class="container" style="margin-top: 20px;">
