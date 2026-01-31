@@ -243,3 +243,35 @@ th {
         margin: 0 5px;
     }
 }
+
+/* Auth Pages (Login/Register) */
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.auth-container h2 {
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.auth-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}

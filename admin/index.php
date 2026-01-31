@@ -20,7 +20,7 @@ $activeRentals = $stmt->fetchColumn();
 
 $stmt = $pdo->query("SELECT COUNT(*) FROM rentals WHERE status = 'pending'");
 $pendingRentals = $stmt->fetchColumn();
-
+?>
 <?php include '../includes/header.php'; ?>
 
 <div class="container" style="margin-top: 20px;">
@@ -29,20 +29,40 @@ $pendingRentals = $stmt->fetchColumn();
 
     <div class="dashboard-grid" style="margin-top: 30px;">
         <div class="stat-card" style="border-color: #007bff;">
-            <h3><?= $totalUsers ?></h3>
-            <p>Total User</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3><?= $totalUsers ?></h3>
+                    <p>Total User</p>
+                </div>
+                <i class="fas fa-users" style="font-size: 2.5rem; color: #007bff; opacity: 0.3;"></i>
+            </div>
         </div>
         <div class="stat-card" style="border-color: #28a745;">
-            <h3><?= $totalProducts ?></h3>
-            <p>Produk / Konsol</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3><?= $totalProducts ?></h3>
+                    <p>Produk / Konsol</p>
+                </div>
+                <i class="fas fa-gamepad" style="font-size: 2.5rem; color: #28a745; opacity: 0.3;"></i>
+            </div>
         </div>
         <div class="stat-card" style="border-color: #ffc107;">
-            <h3><?= $activeRentals ?></h3>
-            <p>Sewa Aktif</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3><?= $activeRentals ?></h3>
+                    <p>Sewa Aktif</p>
+                </div>
+                <i class="fas fa-clock" style="font-size: 2.5rem; color: #ffc107; opacity: 0.3;"></i>
+            </div>
         </div>
         <div class="stat-card" style="border-color: #dc3545;">
-            <h3><?= $pendingRentals ?></h3>
-            <p>Menunggu Konfirmasi</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3><?= $pendingRentals ?></h3>
+                    <p>Menunggu</p>
+                </div>
+                <i class="fas fa-exclamation-circle" style="font-size: 2.5rem; color: #dc3545; opacity: 0.3;"></i>
+            </div>
         </div>
     </div>
     
